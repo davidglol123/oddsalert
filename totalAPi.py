@@ -12,6 +12,7 @@ import pyodbc
 import itertools
 import re
 
+print("xd")
 
 #variables
 today = datetime.date.today()
