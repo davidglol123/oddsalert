@@ -33,9 +33,7 @@ querydict = {
 
 headers = {
   'Accept': 'application/json',
-  'X-API-Key': 'eyJhbGciOiJSUzI1NiIsImtpZCI6Img4LThRX1YwZnlUVHRPY2ZXUWFBNnV2bktjcnIyN1YzcURzQ2Z4bE44MGMiLCJ0eXAiOiJKV1QifQ.eyJhY2Nlc3NfdGllciI6ImFmZmlsaWF0ZSIsImV4cCI6MTk2NjI3NTQzOCwiaWF0IjoxNjUwOTE1NDM4LCJqdGkiOiIyNTc2OGMxMC0yODJkLTQ2ZGItYWMwYy04OThiZWE5YjEwZDgiLCJzdWIiOiIyNTgwNDQ1NC0wMjUxLTQ5MzMtODg3MC05MjdhODUwYTcxMTIiLCJ0ZW5hbnQiOiJjbG91ZGJldCIsInV1aWQiOiIyNTgwNDQ1NC0wMjUxLTQ5MzMtODg3MC05MjdhODUwYTcxMTIifQ.LNxQpK7l69v7-UbraNdweDOvwX7U7psC-jsMsUFbT83jQvv-Q0_iwJhiZmFxb3C8PWeiX_npOLzRqqYAOGU8-CHWbGjWNSn39IgIcp78TJba1ynbk1alwG7wcNYFAAyENbNaeNS_S7DMI8eKn9LL3mnPxBA6EaYfborKTQClLXswhrpgufp8W4vYs-YTTFFjGWX-UHzZm4Kf8rrnkotbDKvHtxzncMqO4yUEJtrBKz2LTINK5YyKc_WYt00aX1LiM311bRV8bWtjkmyR62wo6BNA5jHXOGWDcGOQkUVT78BDuACkG81R01YBaSB4XJXcA5xUTiFTg1T8pGLB9JtQAg'
-}
-
+  'X-API-Key': 'k2NjI3NTQzOCwiaWF0IjoxNjUwOTE1NDM4LCJqdGkiOiIyNTc2OGMxMC0yODJkLTQ2ZGItYW
 while True :
     response = requests.get(url, headers=headers, params=querydict)
     response = response.content
@@ -72,7 +70,7 @@ url = "https://api.b365api.com/v3/events/upcoming?"
 
 querydict = {
     "page":1,
-    "token":"76516-9Mk5bHON84dqo3",
+    "token":"dqo3",
     "sport_id":"151",
 }
 payload = {}
@@ -184,7 +182,7 @@ length_loop = len(MergedDf) #defining the length of dataframe to understand how 
 
 ####################################insert into SQL server to replicate second table.
 # azure sql connect tion string
-conn ='Driver={ODBC Driver 17 for SQL Server};Server=tcp:oddsalert.database.windows.net,1433;Database=oddsalert;Uid=admin01;Pwd=4w4e4r4tA!;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
+conn ='Driver={ODBC Driver 17 for SQL Server};Server=tcp:oddsalertnet,1433;Database=oddsalert;Uid=a;Pwd=4!;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
 quoted = quote_plus(conn)
 engine=create_engine('mssql+pyodbc:///?odbc_connect={}'.format(quoted))
 
@@ -212,11 +210,11 @@ length_loop = len(FinalDf)
 
 #post call to slack
 url = "https://slack.com/api/chat.postMessage" #slack link
-channel = 'C03DRUPLRB2'
+channel = 'C03DRB2'
 
 headers = {
   'Content-Type': 'application/json',
-  'Authorization':'Bearer xoxb-3437572259414-3456892584289-gAPbruDdLbjmCj04Z9Kgo6Uz'
+  'Authorization':'Bearer xoxb-3437572259416Uz'
 }
 
 
